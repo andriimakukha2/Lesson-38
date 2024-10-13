@@ -2,21 +2,19 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
-
-// Імпортуємо компоненти Button та Input
-import Button from './components/Button'; // Шлях до вашого компонента кнопки
-import Input from './components/Input'; // Шлях до вашого компонента поля введення
+import Button from './components/Button';
+import Input from './components/Input';
 
 function App() {
     const [count, setCount] = useState(0);
-    const [inputValue, setInputValue] = useState(''); // Стан для текстового поля
+    const [inputValue, setInputValue] = useState('');
 
     const handleChange = (event) => {
-        setInputValue(event.target.value); // Оновлюємо стан при зміні тексту
+        setInputValue(event.target.value);
     };
 
     const handleClick = () => {
-        alert(`Введений текст: ${inputValue}`); // Виводимо введений текст при натисканні кнопки
+        alert(`Введений текст: ${inputValue}`);
     };
 
     return (
@@ -38,10 +36,8 @@ function App() {
                     Edit <code>src/App.jsx</code> and save to test HMR
                 </p>
 
-                {/* Додаємо поле введення */}
                 <Input placeholder="Введіть текст" onChange={handleChange} />
 
-                {/* Додаємо кнопку */}
                 <Button text="Показати введене" onClick={handleClick} />
             </div>
             <p className="read-the-docs">
